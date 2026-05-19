@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proximity - A Luxurious Gaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sakura-container" id="sakuraContainer"></div>
+
+    <div class="loading-screen" id="loadingScreen">
+        <h1 class="logo">PROXIMITY</h1>
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loadingBar"></div>
+            <div class="sakura-particle"></div>
+            <div class="sakura-particle"></div>
+            <div class="sakura-particle"></div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="main-page hidden" id="mainPage">
+        <div class="menu-container">
+            <button class="menu-btn" onclick="showNewGame()">New Game</button>
+            <button class="menu-btn" onclick="showContinue()">Continue</button>
+            <button class="menu-btn" onclick="showSettings()">Settings</button>
+            <button class="menu-btn" onclick="showCredits()">Credits</button>
+        </div>
+    </div>
+
+    <div class="page-container hidden" id="newGamePage">
+        <div class="card">
+            <h2>New Game</h2>
+            <div class="card-content">
+                <div class="input-group">
+                    <label>Name:</label>
+                    <input type="text" id="playerName" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label>Game Mode:</label>
+                    <select id="gameMode">
+                        <option value="story">Story Mode</option>
+                        <option value="endless">Endless Mode</option>
+                        <option value="challenge">Challenge Mode</option>
+                    </select>
+                </div>
+                <button class="start-btn" onclick="startGame()">
+                    <span>Click to Start</span>
+                    <div class="sakura-effect"></div>
+                </button>
+            </div>
+        </div>
+        <button class="back-btn" onclick="showMain()">Back</button>
+    </div>
+
+    <div class="page-container hidden" id="settingsPage">
+        <div class="card">
+            <h2>Settings</h2>
+            <div class="card-content">
+                <div class="slider-group">
+                    <label>Music Volume</label>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="70" oninput="adjustVolume(this.value)">
+                    <span id="volumeValue">70%</span>
+                </div>
+                <div class="slider-group">
+                    <label>Brightness</label>
+                    <input type="range" id="brightnessSlider" min="50" max="150" value="100" oninput="adjustBrightness(this.value)">
+                    <span id="brightnessValue">100%</span>
+                </div>
+            </div>
+        </div>
+        <button class="back-btn" onclick="showMain()">Back</button>
+    </div>
+
+    <div class="page-container hidden" id="creditsPage">
+        <div class="credits-content">
+            <div class="credits-text">
+                <p>Mone is a student who is currently learning to become an Agentic AI Developer. This is one of her most successful works she is really proud of. Enjoy the thrill of this beautiful creation made by Mone.</p>
+            </div>
+            <img src="https://i.pinimg.com/736x/f2/4b/47/f24b47afda10a1795b6bafaa597aa766.jpg" alt="Creator" class="credits-image">
+        </div>
+        <button class="back-btn" onclick="showMain()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
