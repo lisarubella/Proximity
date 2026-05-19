@@ -403,3 +403,143 @@ body {
         opacity: 0;
     }
 }
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .loading-bar-container {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .menu-btn {
+        font-size: 1.5rem;
+        padding: 1rem 2.5rem;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .menu-container {
+        gap: 1.5rem;
+    }
+
+    .card {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        min-height: 400px;
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-group label,
+    .slider-group label {
+        font-size: 0.85rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .start-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .back-btn {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .credits-content {
+        flex-direction: column;
+        width: 90%;
+        gap: 2rem;
+    }
+
+    .credits-text {
+        font-size: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .credits-image {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .sakura {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .menu-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+        min-height: 350px;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+    }
+
+    .card-content {
+        gap: 1.2rem;
+    }
+
+    .credits-text {
+        font-size: 0.9rem;
+        padding: 1.2rem;
+    }
+
+    .back-btn {
+        bottom: 0.8rem;
+        left: 0.8rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .menu-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 0.85rem;
+    }
+}
